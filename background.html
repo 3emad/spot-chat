@@ -1,0 +1,18 @@
+<html>
+	<script>
+	chrome.extension.onRequest.addListener(
+		function(request, sender, sendResponse) {
+		
+		//chrome.experimental.sidebar.show();
+		//chrome.experimental.sidebar.expand();
+		var tab = sender.tab;
+		chrome.experimental.sidebar.show({tabId: tab.id});
+		chrome.experimental.sidebar.expand({tabId: tab.id});
+
+		//chrome.experimental.sidebar.getState(tab.id, function(details) {
+		//if (details.state != 'active') {
+		//  chrome.experimental.sidebar.collapse({tabId: tab.id});
+		sendResponse({name: 'loaded'}); // snub them.
+	});
+	</script>
+</html>

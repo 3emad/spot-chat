@@ -1,0 +1,30 @@
+{
+  "name": "Chat Here",
+  "version": "0.1",
+  "description": "Open a panel of generic chat or a specific highlighted area to start huddle discussion about",
+  //"default_locale": "en", must have _locale ( tree ) for each language
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "background_page": "background.html",
+  "permissions": [
+  	"experimental",
+    "unlimitedStorage",
+    "tabs",
+    "notifications",
+    "cookies",
+    "fileBrowserHandler"
+  ],
+  "sidebar": { 
+	  "default_icon": "icon.png", 
+	  "default_page": "sidebar.html", 
+	  "default_title": "come on bitch" 
+	},
+  "content_scripts": [
+  	{
+      "matches": ["http://*/*"],
+      "css": ["mystyles.css"],
+      "js": ["jquery-1.6.1.min.js","myscripts.js"]
+    }
+  ]
+}
