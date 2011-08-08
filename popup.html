@@ -63,7 +63,7 @@ function readyListener (e) {
   displayChatMessage("Joining chat room...");
  
   // Create the chat room
-  msgManager.sendUPC(UPC.CREATE_ROOM, roomID);
+  msgManager.sendUPC(UPC.CREATE_ROOM, document.location);
   // Join the chat room
   msgManager.sendUPC(UPC.JOIN_ROOM, roomID);
 }
