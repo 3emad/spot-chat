@@ -4,9 +4,10 @@
   "description": "Open a panel of generic chat or a specific highlighted area to start huddle discussion about",
   //"default_locale": "en", must have _locale ( tree ) for each language
   "browser_action": {
-    "default_icon": "icon.png"
+    "default_icon": "icon.png",
+	"popup": "popup.html"
   },
-  "background_page": "background.html",
+  //"background_page": "background.html",
   "permissions": [
   	"experimental",
     "unlimitedStorage",
@@ -15,11 +16,11 @@
     "cookies",
     "fileBrowserHandler"
   ],
-  "sidebar": { 
-	  "default_icon": "icon.png", 
-	  "default_page": "sidebar.html", 
-	  "default_title": "come on bitch" 
-	},
+//"sidebar": { 
+//	  "default_icon": "icon.png", 
+//	  "default_page": "sidebar.html", 
+//	  "default_title": "come on bitch" 
+//	},
   "content_scripts": [
   	{
       "matches": ["http://*/*"],
