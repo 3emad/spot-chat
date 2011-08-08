@@ -23,7 +23,14 @@
 var orbiter;
 var msgManager;
 var UPC = net.user1.orbiter.UPC;
-var roomID = document.location.href;
+var tablink;
+var roomID;
+
+chrome.tabs.getSelected(null,function(tab) {
+	roomID = tab.url;
+	alert(roomID);
+	init();
+});
  
 //==============================================================================
 // INITIALIZATION
@@ -131,7 +138,7 @@ function displayChatMessage (message) {
 </script>
 </head>
  
-<body onload="init()">
+<body>
 <!--Contains the incoming chat messages-->
 <div id="chatPane"></div>
  
